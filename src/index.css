@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bitcount+Prop+Single+Ink:wght@100..900&family=Bruno+Ace+SC&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100dvh;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #000012;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#root {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  color: #444939;
+}

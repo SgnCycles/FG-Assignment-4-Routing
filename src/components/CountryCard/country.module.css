@@ -1,0 +1,32 @@
+.countryCard {
+  background-color: #d0a616;
+  padding-left: 20px;
+  text-decoration: none;
+  color: black;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.countryCardHeader, .countryCardCapital, .countryCardPopulation {
+  margin: 0; 
+}
+
+.countryCardFlag {
+  margin-left: 10px;
+}
+
+.countryCardHeader {
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #30303d;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+}
+
+span {
+  font-weight: 700;
+}

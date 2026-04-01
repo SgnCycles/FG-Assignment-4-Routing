@@ -1,0 +1,11 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+.homeContainer > :first-child {
+  display: flex;
+  flex-grow: 1;
+  min-height: 0;
+}
