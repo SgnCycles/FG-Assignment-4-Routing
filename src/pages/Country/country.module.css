@@ -1,3 +1,72 @@
 .countryPage {
   color: snow;
+  flex-grow: 1;
+  padding-top: 30px;
+  /* background: linear-gradient(180deg, rgb(0, 0, 18) 10%, rgb(21, 53, 97) 90%); */
+}
+
+.countryHeader {
+  text-align: center;
+  font-family: "Bruno Ace SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #f8f8ff;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  width: 30%;
+  place-self: center;
+}
+
+.countryImageContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* display: flex;
+  justify-content: space-evenly; */
+  margin-bottom: 30px;
+}
+
+.countryHeader, .countryFlag, .countryCoatOfArms {
+  padding: 0;
+}
+
+.countryHeader {
+  text-align: center;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.countryCoatOfArms, .countryFlag {
+  place-self: center;
+}
+
+.countryFlag, .countryCoatOfArms {
+  display: flex;
+  justify-content: center;
+}
+
+.countryFlag img, .countryCoatOfArms img {
+  display: block;
+  max-height: 300px;
+  max-width: 100%;
+}
+
+.countryFacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 0 30px 30px;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+.countryFactsHeaders {
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.countryBorder, .countryCurrency {
+  list-style-type: none;
+  padding-left: 0;
 }

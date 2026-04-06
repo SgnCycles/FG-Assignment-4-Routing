@@ -1,11 +1,12 @@
 .globeContainer {
-  flex-grow: 1;
   display: flex;
-  /* min-height: 0; */
-  /* position: relative; */
+  min-height: 0;
   overflow: hidden;
 }
 
 .globeContainer canvas {
+  height: 100%;
+  width: 100%;
+  display: block;
   pointer-events: auto;
 }
