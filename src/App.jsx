@@ -34,7 +34,7 @@ function App() {
         <Route path='/continent/:name' element={<Continent coordinates={coordinates} updateCoordinates={updateCoordinates}/>}/>
       </Route>
       <Route element={<LayoutCountry showMobileMenu={showMobileMenu} mobileMenu={mobileMenu} closeMobileMenu={closeMobileMenu} />}>
-        <Route path='/country/:name' element={<Country countryCoordinates={coordinates} updateCountryCoordinates={updateCoordinates}/>}/>
+        <Route path='/country/:name' element={<Country />}/>
       </Route>
     </Routes>
     </>
