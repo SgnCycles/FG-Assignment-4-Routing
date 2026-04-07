@@ -3,11 +3,11 @@ import Header from "../Header"
 import Footer from "../Footer"
 import { Outlet } from 'react-router-dom'
 
-const LayoutContinent = () => {
+const LayoutContinent = ({showMobileMenu, mobileMenu, closeMobileMenu}) => {
   return (
     <>
     <div className={styles.continentContainer}>
-      <Header />
+      <Header showMobileMenu={showMobileMenu} mobileMenu={mobileMenu} closeMobileMenu={closeMobileMenu}/>
       <Outlet />
       <Footer />
     </div>

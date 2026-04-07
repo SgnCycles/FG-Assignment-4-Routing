@@ -2,11 +2,11 @@ import styles from './header.module.css'
 import Logo from '../Logo'
 import Navigation from '../Navigation'
 
-const Header = () => {
+const Header = ({showMobileMenu, mobileMenu, closeMobileMenu}) => {
   return (
     <header className={styles.header}>
       <Logo/>
-      <Navigation />
+      <Navigation showMobileMenu={showMobileMenu} mobileMenu={mobileMenu} closeMobileMenu={closeMobileMenu}/>
     </header>
   )
 }

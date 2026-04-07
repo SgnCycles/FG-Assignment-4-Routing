@@ -13,5 +13,11 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
   margin: 0 30px 30px;
-  justify-content: center;
+  place-items: center;
+}
+
+@media (min-width: 340px) and (max-width: 1024px) {
+  .continentHeader {
+    font-size: 1.5rem;
+  }
 }
