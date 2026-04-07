@@ -2,11 +2,11 @@
   display: flex;
   min-height: 0;
   overflow: hidden;
+  pointer-events: auto;
 }
 
-.globeContainer canvas {
-  height: 100%;
-  width: 100%;
-  display: block;
-  pointer-events: auto;
+@media (min-width: 340px) and (max-width: 1024px) {
+  .globeContainer {
+    place-items: center;
+  }
 }

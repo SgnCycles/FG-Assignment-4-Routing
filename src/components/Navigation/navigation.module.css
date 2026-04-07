@@ -54,3 +54,66 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@media (min-width: 340px) and (max-width: 1024px) {
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .navMenuList {
+    margin-top: 0;
+    padding: 60px 0 0 0;
+    gap: 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: fixed;
+    background-color: rgba(215, 125, 29, 0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.6s linear;
+    z-index: 1999;
+    padding-left: 0;
+    overscroll-behavior: contain;
+    overflow-y: auto;
+    border-radius: 0;
+  }
+
+  .navMenuList::after {
+    border-radius: 0;
+  }
+
+  .navItem {
+    width: 100%;
+    text-align: center;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: 700;
+  }
+
+  .navMenuList.active{
+    opacity: 1;
+    transform: translateX(0);
+    gap: 6%;
+  }
+}
+
+@media (min-width: 340px) and (max-width: 767px) {
+  .navItem {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navItem {
+    font-size: 2rem;
+  }
+}

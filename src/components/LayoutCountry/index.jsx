@@ -2,10 +2,10 @@ import Header from "../Header"
 import Footer from "../Footer"
 import { Outlet } from 'react-router-dom'
 
-const LayoutCountry = () => {
+const LayoutCountry = ({showMobileMenu, mobileMenu, closeMobileMenu}) => {
   return (
     <>
-      <Header />
+      <Header showMobileMenu={showMobileMenu} mobileMenu={mobileMenu} closeMobileMenu={closeMobileMenu}/>
       <Outlet />
       <Footer />
     </>

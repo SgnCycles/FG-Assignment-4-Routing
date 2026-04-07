@@ -45,7 +45,7 @@
 .cardCapital, .cardPopulation {
   display: block;
   color: rgba(0, 98, 111, 0.8); 
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 20px;
 }
 
@@ -76,6 +76,7 @@
   font-size: 12px;
   letter-spacing: 2px;
   cursor: pointer;
+  text-shadow: 1px 1px 1px rgb(24, 1, 94);
 }
 
 .readMoreButton:hover {
