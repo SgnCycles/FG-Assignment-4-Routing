@@ -17,10 +17,3 @@ body {
   font-weight: 300;
   font-style: normal;
 }
-
-#root {
-  display: flex;
-  min-height: 100dvh;
-  flex-direction: column;
-  color: #444939;
-}

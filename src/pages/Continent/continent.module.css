@@ -1,11 +1,12 @@
 .continentHeader {
   text-align: center;
-  font-family: "Bruno Ace SC", sans-serif;
+  font-family: 'Bruno Ace SC', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #f8f8ff;
   letter-spacing: 3px;
   font-size: 3rem;
+  margin-top: 0;
 }
 
 .countryContainer {
@@ -16,8 +17,14 @@
   place-items: center;
 }
 
-@media (min-width: 340px) and (max-width: 1024px) {
+@media (min-width: 340px) and (max-width: 767px) {
   .continentHeader {
-    font-size: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .continentHeader {
+    font-size: 2.5rem;
   }
 }

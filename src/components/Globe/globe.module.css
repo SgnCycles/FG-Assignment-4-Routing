@@ -1,12 +1,47 @@
-.globeContainer {
+.globeContainer, .globeHome {
   display: flex;
-  min-height: 0;
   overflow: hidden;
+}
+
+.globeContainer {
+  min-height: 0;
   pointer-events: auto;
 }
 
-@media (min-width: 340px) and (max-width: 1024px) {
-  .globeContainer {
+@media (min-width: 340px) and (max-width: 767px) {
+  .globeContainer, .globeHome {
     place-items: center;
+  }
+  
+  .globeContainer {
+    height: 75vh;
+  }
+
+  .globeHome {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .globeContainer, .globeHome {
+    place-items: center;
+  }
+
+  .globeHome {
+    height: 90dvh;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1919px) {
+  .globeContainer, .globeHome {
+    place-items: center;
+    height: 80dvh;
+  }
+}
+
+@media (min-width: 1920px) {
+  .globeContainer, .globeHome {
+    place-items: center;
+    height: 85dvh;
   }
 }

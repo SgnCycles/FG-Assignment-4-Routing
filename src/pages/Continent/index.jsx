@@ -27,7 +27,7 @@ const Continent = ({coordinates, updateCoordinates}) => {
   return (
     <>
     <Globe coordinates={coordinates}/>
-    <h1 className={styles.continentHeader}>Welcome to {name.charAt(0).toUpperCase() + name.slice(1)}!</h1>
+    <h1 className={styles.continentHeader}>Welcome to {name.charAt(0).toUpperCase() + name.slice(1)}</h1>
     <div className={styles.countryContainer}>
       {filteredContinentCountries && filteredContinentCountries.map((country, index) => <CountryCard key={index} country={country}/>)}
     </div>
