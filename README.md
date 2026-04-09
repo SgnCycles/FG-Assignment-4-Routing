@@ -5,7 +5,7 @@ For this school assignment I have built a multipage React website using routing 
 The topic of the website is to explore the world's continents and countries, providing geographic and general information about each country with data fecthed from an API.
 
 ## Live Demo ##
-Checkout my [website](https://fg-assignment-4-routing.vercel.app/).
+Check out my [website](https://fg-assignment-4-routing.vercel.app/).
 
 ## Tech Stack ##
 - HTML5
