@@ -13,7 +13,7 @@ const CountryCard = ({country}) => {
         <div className={styles.cardGlass}></div>
         <section className={styles.cardContent}>
             <h2 className={styles.cardTitle}>{country.name.common}</h2>
-            <p className={styles.cardCapital}><span className={styles.cardInfoTitle}>Capital: </span>{country.capital?.join(', ')}</p>
+            <p className={styles.cardCapital}><span className={styles.cardInfoTitle}>Capital: </span>{country.capital?.join(', ') ?? (country.capitalInfo ? 'No capital' : '')}</p>
             <p className={styles.cardPopulation}><span className={styles.cardInfoTitle}>Population: </span>{Intl.NumberFormat().format(country.population)}</p>
         </section>
         <section className={styles.readMore}>

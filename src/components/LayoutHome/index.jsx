@@ -1,7 +1,7 @@
+import { Outlet } from 'react-router-dom'
 import styles from './layoutHome.module.css'
 import Header from '../Header'
 import Footer from '../Footer'
-import { Outlet } from 'react-router-dom'
 import Logo from '../Logo'
 
 const LayoutHome = ({showMobileMenu, mobileMenu, closeMobileMenu}) => {

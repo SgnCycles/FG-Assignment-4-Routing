@@ -1,7 +1,7 @@
+import { Outlet } from 'react-router-dom'
 import styles from './layoutContinent.module.css'
 import Header from '../Header'
 import Footer from '../Footer'
-import { Outlet } from 'react-router-dom'
 
 const LayoutContinent = ({showMobileMenu, mobileMenu, closeMobileMenu}) => {
   return (

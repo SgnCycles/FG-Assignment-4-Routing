@@ -36,7 +36,6 @@ const GlobeComponent = ({coordinates}) => {
       <Globe ref={refGlobeComponent} height={globeSize} globeImageUrl='//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg'
         bumpImageUrl='//cdn.jsdelivr.net/npm/three-globe/example/img/earth-topology.png' globeOffset={globeOffsetSize} />
     </div>
-
   )
 }
 

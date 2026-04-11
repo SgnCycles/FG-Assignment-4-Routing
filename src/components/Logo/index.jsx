@@ -1,6 +1,6 @@
+import { useLocation } from 'react-router-dom'
 import styles from './logo.module.css'
 import siteLogo from '../../assets/logos/logo.png'
-import { useLocation } from 'react-router-dom'
 
 const Logo = () => {
 

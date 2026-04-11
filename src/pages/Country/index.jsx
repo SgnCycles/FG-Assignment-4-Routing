@@ -1,13 +1,13 @@
+import { useParams } from 'react-router-dom'
 import styles from './country.module.css'
 import useFetch from '../../hooks/useFetch'
-import { useParams } from 'react-router-dom'
 import Map from '../../components/Map'
 
 const Country = () => {
 
   const {name} = useParams()
   const normalizedCountryName = name.replace(/-/g, ' ')
-  const countryData = useFetch(`name/${encodeURIComponent(normalizedCountryName)}`)
+  const countryData = useFetch(`name/${encodeURIComponent(normalizedCountryName)}`, `name/${name}`)
 
   if (!countryData) {
     return null
@@ -52,7 +52,7 @@ const Country = () => {
         </section>
         <section className={`${styles.factContainer} ${styles.countryCapital}`}>
           <h3 className={styles.countryFactsHeader}>Capital:</h3>
-          <p className={styles.countryFactsInfo}>{country.capital.join(', ')}</p>
+          <p className={styles.countryFactsInfo}>{country.capital?.join(', ') ?? (country.capitalInfo ? 'No capital' : '')}</p>
         </section>
         <section className={`${styles.factContainer} ${styles.countryPopulation}`}>
           <h3 className={styles.countryFactsHeader}>Population:</h3>

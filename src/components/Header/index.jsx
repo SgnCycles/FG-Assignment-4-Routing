@@ -1,7 +1,7 @@
+import { useLocation } from 'react-router-dom'
 import styles from './header.module.css'
 import Logo from '../Logo'
 import Navigation from '../Navigation'
-import { useLocation } from 'react-router-dom'
 
 const Header = ({showMobileMenu, mobileMenu, closeMobileMenu}) => {
 
@@ -10,7 +10,7 @@ const Header = ({showMobileMenu, mobileMenu, closeMobileMenu}) => {
 
   return (
     <header className={styles.header}>
-      {!isHomepage && <Logo/>}
+      {!isHomepage && <Logo />}
       <Navigation showMobileMenu={showMobileMenu} mobileMenu={mobileMenu} closeMobileMenu={closeMobileMenu}/>
     </header>
   )

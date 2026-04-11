@@ -1,5 +1,5 @@
-import styles from './navigation.module.css'
 import { NavLink } from 'react-router-dom'
+import styles from './navigation.module.css'
 import Hamburger from '../Hamburger'
 import continents from '../../data/continents'
 

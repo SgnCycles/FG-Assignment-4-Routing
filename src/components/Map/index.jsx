@@ -1,7 +1,7 @@
 import { div } from 'three/src/nodes/math/OperatorNode.js'
-import styles from './map.module.css'
 import { MapContainer, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
+import styles from './map.module.css'
 
 const Map = ({countryLatitude, countryLongitude }) => {
   return(

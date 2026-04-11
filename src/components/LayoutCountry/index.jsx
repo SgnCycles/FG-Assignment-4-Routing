@@ -1,11 +1,10 @@
-import styles from './layoutCountry.module.css'
+import { Outlet } from 'react-router-dom'
 import Header from '../Header'
 import Footer from '../Footer'
-import { Outlet } from 'react-router-dom'
 
 const LayoutCountry = ({showMobileMenu, mobileMenu, closeMobileMenu}) => {
   return (
-    <div className={styles.CountryContainer}>
+    <div>
       <Header showMobileMenu={showMobileMenu} mobileMenu={mobileMenu} closeMobileMenu={closeMobileMenu}/>
       <Outlet />
       <Footer />
