@@ -10,49 +10,50 @@ PLANNING THE ASSIGNMENT - Globetrotter
     - Country cards for countries that belong to the continent;
   - Country page:
     - Navigation menu;
-    - No Globe, Map showing the countrie's location instead;
+    - No Globe, Map instead showing the countrie's location instead;
+    - Most important facts about the country;
 
 2. Interaction flow across website:
-User is able to click on NavItem of the wished continent; Globe rotates to the location;
-Countries of the clicked continent appear below as a list with only the main 2-3 info pieces representing a country (flag, name, capital, population);
+  User is able to click on NavItem of the wished continent; Globe rotates to the location;
+  Countries of the clicked continent appear below as a list with only the main 2-3 info pieces representing a country (flag, name, capital, population);
 
 3. Routes (dynamic):
-‘/’ = the homepage;
-‘/continent/:name’ = continent page;
-‘/country/:name’ = country page;
+  ‘/’ = the homepage;
+  ‘/continent/:name’ = continent url;
+  ‘/country/:name’ = country url;
 
 4. Globe:
-Use "react-globe.gl"; globe control using: Camera position; lat/lng (latitude and longitude) (in the rest countries api the info is available).
-What I need for the globe:
-Central latitude and longitude (ex. Europe - lat 50, lng - 10);
-Save the coordinates for each continent in the data file; in this case saved it in the data file for the NavMenu;
+  Use "react-globe.gl"; globe control using: Camera position; lat/lng (latitude and longitude) (in the rest countries api the info is available).
+  What I need for the globe:
+    - Central latitude and longitude (ex. Europe - lat 50, lng - 10);
+    - Save the coordinates for each continent in the data file; in this case save it in the data file for the NavMenu;
 
 5. DATA: 
-  - RestCountries API - https://restcountries.com/:
-free to use, have all the data needed, including latitude and longitude;
-Should fetch all the countries once (on page load);
-Filter the countries based on the continents;
-Fetch the country from the filtered list and display the info;
-- Leaflet API - https://leafletjs.com/;
-interactive maps; free to use;
-Can access location using latitude and longitude;
-- Data file (continents.js):
-Containing: continent name, latitude, longitude.
+    - RestCountries API - https://restcountries.com/:
+      free to use, have all the data needed, including latitude and longitude;
+      Should fetch all the countries once (on page load);
+      Filter the countries based on the continents;
+      Fetch the country from the filtered list and display the info;
+    - Leaflet API - https://leafletjs.com/;
+      interactive maps; free to use;
+      Can access location using latitude and longitude;
+    - Data file (continents.js):
+      Containing: continent name, latitude, longitude.
 
 6. NavMenu:
-7 items: [‘Home’, ‘Europe’, ‘Asia’, ‘Africa’, ‘North America’, ‘South America’, ‘Oceania’];
-Place NavMenu on the bottom for the Homepage to leave the biggest space and attention to the globe;
-The rest of the pages the NavMenu is on top.
+  7 items: [‘Home’, ‘Europe’, ‘Asia’, ‘Africa’, ‘North America’, ‘South America’, ‘Oceania’];
+  Place NavMenu on the bottom for the Homepage to leave the biggest space and attention to the globe;
+  The rest of the pages the NavMenu is on top.
 
 7. Clicks Flow:
-Click on nav menu, state of selectedContinent updates; URL endpoint updates /continent/:name;
-Show where on the globe;
-Show filtered countries;
-Click on the country on the list, state of selectedCountry updates; URL endpoint updates: /country/:name;
-Show country info and map.
+  Click on nav menu, state of selectedContinent updates; URL endpoint updates /continent/:name;
+  Show where on the globe;
+  Show filtered countries;
+  Click on the country on the list, state of selectedCountry updates; URL endpoint updates: /country/:name;
+  Show country info and map.
 
 8. Mobile/Tablet view:
-Hamburger on Mobile and Tablet;
+  Hamburger on Mobile and Tablet;
 
 9. Components:
   - CountryCard;

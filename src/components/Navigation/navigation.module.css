@@ -59,7 +59,7 @@
 
 .navItem::after {
   top: -3px;
-  left: -4px;
+  left: -5px;
   border-top: 2px solid transparent;
   border-left: 2px solid transparent;
 }
