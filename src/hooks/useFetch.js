@@ -1,32 +1,65 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 
-const useFetch = (endpoint = '', fallbackEndpoint = '') => {
+const useFetch = (endpoint = "", fallbackEndpoint = "") => {
+  const API_ENDPOINT = import.meta.env.VITE_API_ENDPOINT;
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
-  const API_ENDPOINT = `${import.meta.env.VITE_API_ENDPOINT}`
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(null);
+
+  const headers = {
+    Authorization: `Bearer ${API_KEY}`,
+  };
+
+  const fetchAllPages = async (path) => {
+    let allObjects = [];
+    let offset = 0;
+    const limit = 100;
+    let more = true;
+
+    while (more) {
+      const separator = path.includes("?") ? "&" : "?";
+      const response = await fetch(
+        `${API_ENDPOINT}${path}${separator}limit=${limit}&offset=${offset}`,
+        { headers },
+      );
+
+      if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+      }
+
+      const json = await response.json();
+      allObjects = allObjects.concat(json.data.objects);
+      more = json.data.meta.more;
+      offset += limit;
+    }
+
+    return allObjects;
+  };
 
   const getData = async () => {
     try {
-      const response = await fetch(`${API_ENDPOINT}${endpoint}`)
-
-      if (!response.ok && fallbackEndpoint) {
-        const responseFallback = await fetch(`${API_ENDPOINT}${fallbackEndpoint}`)
-        const dataFallback = await responseFallback.json()
-        setData(dataFallback)
-        return
+      const objects = await fetchAllPages(endpoint);
+      setData(objects);
+    } catch (error) {
+      if (fallbackEndpoint) {
+        try {
+          const fallbackObjects = await fetchAllPages(fallbackEndpoint);
+          setData(fallbackObjects);
+          return;
+        } catch (fallbackError) {
+          console.error("Fallback request failed:", fallbackError);
+          return;
+        }
       }
-      const countryData = await response.json()
-      setData(countryData)
-    } catch(error) {
-      console.log(error)
+      console.error("Fetch error:", error);
     }
-  }
+  };
 
   useEffect(() => {
-    getData()
-  }, [endpoint])
+    getData();
+  }, [endpoint]);
 
-  return data
-}
+  return data;
+};
 
-export default useFetch
+export default useFetch;
